@@ -1,0 +1,42 @@
+# Based on https://raw.githubusercontent.com/github/gitignore/main/Node.gitignore
+
+# Logs
+
+logs
+_.log
+
+# Caches 
+
+.cache
+
+# Runtime data
+
+pids
+_.pid
+_.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+
+coverage
+*.lcov
+
+# nyc test coverage
+
+.nyc_output
+
+# Dependency directories
+
+node_modules/
+
+# Output of 'npm pack'
+
+*.tgz
+
+dist
+
+# IntelliJ based IDEs
+.idea
+
+# Finder (MacOS) folder config
+.DS_Store
