@@ -151,6 +151,6 @@ bun install
 Ensure linting, formatting, and tests pass before submitting a PR.
 
 ```bash
-bun check
+bun run check
 bun test
 ```
