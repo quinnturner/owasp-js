@@ -74,11 +74,11 @@ export function authn_login_successafterfail<
  * @example
  * ```json
  * {
- *  "datetime": "2019-01-01 00:00:00,000",
- *  "appid": "foobar.netportal_auth",
- *  "event": "authn_login_fail:joebob1",
- *  "level": "WARN",
- *  "description": "User joebob1 login failed",
+ * 	"datetime": "2019-01-01 00:00:00,000",
+ * 	"appid": "foobar.netportal_auth",
+ * 	"event": "authn_login_fail:joebob1",
+ * 	"level": "WARN",
+ * 	"description": "User joebob1 login failed",
  * 	"requestId": "b7c29e30-199e-4234-a8f1-fff0c12f1624"
  * }
  * ```
@@ -104,11 +104,11 @@ export function authn_login_fail<U extends string | number | bigint>(
  * @example
  * ```json
  * {
- *  "datetime": "2019-01-01 00:00:00,000",
- *  "appid": "foobar.netportal_auth",
- *  "event": "authn_login_fail_max:joebob1,3",
- *  "level": "WARN",
- *  "description": "User joebob1 reached the login fail limit of 3",
+ * 	"datetime": "2019-01-01 00:00:00,000",
+ * 	"appid": "foobar.netportal_auth",
+ * 	"event": "authn_login_fail_max:joebob1,3",
+ * 	"level": "WARN",
+ * 	"description": "User joebob1 reached the login fail limit of 3",
  * 	"requestId": "b7c29e30-199e-4234-a8f1-fff0c12f1624"
  * }
  * ```
@@ -137,10 +137,10 @@ export function authn_login_fail_max<
  *
  * **Reasons:**
  * ```txt
- *   maxretries: The maximum number of retries was reached
- *   suspicious: Suspicious activity was observed on the account
- *   customer: The customer requested their account be locked
- *   other: Other
+ * 	 maxretries: The maximum number of retries was reached
+ * 	 suspicious: Suspicious activity was observed on the account
+ * 	 customer: The customer requested their account be locked
+ * 	 other: Other
  * ```
  * @example
  * ```ts

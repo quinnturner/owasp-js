@@ -13,11 +13,11 @@
  * @example
  * ```json
  * {
- *  "datetime": "2019-01-01 00:00:00,000",
- *  "appid": "foobar.netportal_auth",
- *  "event": "sensitive_create:joebob1, /users/admin/some/important/path",
- *  "level": "WARN",
- *  "description": "User joebob1 created a new file in /users/admin/some/important/path",
+ * 	"datetime": "2019-01-01 00:00:00,000",
+ * 	"appid": "foobar.netportal_auth",
+ * 	"event": "sensitive_create:joebob1, /users/admin/some/important/path",
+ * 	"level": "WARN",
+ * 	"description": "User joebob1 created a new file in /users/admin/some/important/path",
  * 	"requestId": "cd1f3327-48ea-4614-bce0-260d14e30e93"
  * }
  * ```
@@ -46,11 +46,11 @@ export function sensitive_create<
  * @example
  * ```json
  * {
- *  "datetime": "2019-01-01 00:00:00,000",
- *  "appid": "foobar.netportal_auth",
- *  "event": "sensitive_read:joebob1, /users/admin/some/important/path",
- *  "level": "INFO",
- *  "description": "User joebob1 read file /users/admin/some/important/path",
+ * 	"datetime": "2019-01-01 00:00:00,000",
+ * 	"appid": "foobar.netportal_auth",
+ * 	"event": "sensitive_read:joebob1, /users/admin/some/important/path",
+ * 	"level": "INFO",
+ * 	"description": "User joebob1 read file /users/admin/some/important/path",
  * 	"requestId": "df064296-507f-46e3-8384-bb14966cd2bc"
  * }
  * ```
@@ -80,11 +80,11 @@ export function sensitive_read<
  * @example
  * ```json
  * {
- *  "datetime": "2019-01-01 00:00:00,000",
- *  "appid": "foobar.netportal_auth",
- *  "event": "sensitive_update:joebob1, /users/admin/some/important/path",
- *  "level": "WARN",
- *  "description": "User joebob1 modified file /users/admin/some/important/path",
+ * 	"datetime": "2019-01-01 00:00:00,000",
+ * 	"appid": "foobar.netportal_auth",
+ * 	"event": "sensitive_update:joebob1, /users/admin/some/important/path",
+ * 	"level": "WARN",
+ * 	"description": "User joebob1 modified file /users/admin/some/important/path",
  * 	"requestId": "9345a8a2-611e-4053-a75c-05c29101dc59"
  * }
  * ```
@@ -114,11 +114,11 @@ export function sensitive_update<
  * @example
  * ```json
  * {
- *  "datetime": "2019-01-01 00:00:00,000",
- *  "appid": "foobar.netportal_auth",
- *  "event": "sensitive_delete:joebob1, /users/admin/some/important/path",
- *  "level": "WARN",
- *  "description": "User joebob1 marked file /users/admin/some/important/path for deletion",
+ * 	"datetime": "2019-01-01 00:00:00,000",
+ * 	"appid": "foobar.netportal_auth",
+ * 	"event": "sensitive_delete:joebob1, /users/admin/some/important/path",
+ * 	"level": "WARN",
+ * 	"description": "User joebob1 marked file /users/admin/some/important/path for deletion",
  * 	"requestId": "f6a08db8-df7a-4b13-82ee-18aaf15c7fc1"
  * }
  * ```

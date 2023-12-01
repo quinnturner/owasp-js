@@ -12,11 +12,11 @@
  * @example
  * ```json
  * {
- *  "datetime": "2019-01-01 00:00:00,000",
- *  "appid": "foobar.netportal_auth",
- *  "event": "sys_startup:joebob1",
- *  "level": "WARN",
- *  "description": "User joebob1 spawned a new instance",
+ * 	"datetime": "2019-01-01 00:00:00,000",
+ * 	"appid": "foobar.netportal_auth",
+ * 	"event": "sys_startup:joebob1",
+ * 	"level": "WARN",
+ * 	"description": "User joebob1 spawned a new instance",
  * 	"requestId": "27939458-b680-4132-925f-4dc38678b4b2"
  * }
  * ```
@@ -40,11 +40,11 @@ export function sys_startup<U extends string | number | bigint>(userId: U) {
  * @example
  * ```json
  * {
- *  "datetime": "2019-01-01 00:00:00,000",
- *  "appid": "foobar.netportal_auth",
- *  "event": "sys_shutdown:joebob1",
- *  "level": "WARN",
- *  "description": "User joebob1 stopped this instance",
+ * 	"datetime": "2019-01-01 00:00:00,000",
+ * 	"appid": "foobar.netportal_auth",
+ * 	"event": "sys_shutdown:joebob1",
+ * 	"level": "WARN",
+ * 	"description": "User joebob1 stopped this instance",
  * 	"requestId": "cbe8f317-085c-46a6-9551-057b7c275b63"
  * }
  * ```
@@ -68,11 +68,11 @@ export function sys_shutdown<U extends string | number | bigint>(userId: U) {
  * @example
  * ```json
  * {
- *  "datetime": "2019-01-01 00:00:00,000",
- *  "appid": "foobar.netportal_auth",
- *  "event": "sys_restart:joebob1",
- *  "level": "WARN",
- *  "description": "User joebob1 initiated a restart",
+ * 	"datetime": "2019-01-01 00:00:00,000",
+ * 	"appid": "foobar.netportal_auth",
+ * 	"event": "sys_restart:joebob1",
+ * 	"level": "WARN",
+ * 	"description": "User joebob1 initiated a restart",
  * 	"requestId": "1e7b4e37-7acd-4d08-89e9-8a9b07de6a90"
  * }
  * ```
@@ -97,11 +97,11 @@ export function sys_restarted<U extends string | number | bigint>(userId: U) {
  * @example
  * ```json
  * {
- *  "datetime": "2019-01-01 00:00:00,000",
- *  "appid": "foobar.netportal_auth",
- *  "event": "sys_crash:outofmemory",
- *  "level": "WARN",
- *  "description": "The system crashed due to Out of Memory error.",
+ * 	"datetime": "2019-01-01 00:00:00,000",
+ * 	"appid": "foobar.netportal_auth",
+ * 	"event": "sys_crash:outofmemory",
+ * 	"level": "WARN",
+ * 	"description": "The system crashed due to Out of Memory error.",
  * 	"requestId": "43549e84-4d5a-402c-a5cd-753a28795f82"
  * }
  * ```
@@ -127,11 +127,11 @@ export function sys_crash<R extends string>(reason: R) {
  * @example
  * ```json
  * {
- *  "datetime": "2019-01-01 00:00:00,000",
- *  "appid": "foobar.netportal_auth",
- *  "event": "sys_monitor_disabled:joebob1,crowdstrike",
- *  "level": "WARN",
- *  "description": "User joebob1 has disabled CrowdStrike",
+ * 	"datetime": "2019-01-01 00:00:00,000",
+ * 	"appid": "foobar.netportal_auth",
+ * 	"event": "sys_monitor_disabled:joebob1,crowdstrike",
+ * 	"level": "WARN",
+ * 	"description": "User joebob1 has disabled CrowdStrike",
  * 	"requestId": "897365e2-7cd2-475d-a94b-082bf11f368e"
  * }
  * ```
@@ -161,11 +161,11 @@ export function sys_monitor_disabled<
  * @example
  * ```json
  * {
- *  "datetime": "2019-01-01 00:00:00,000",
- *  "appid": "foobar.netportal_auth",
- *  "event": "sys_monitor_enabled:joebob1,crowdstrike",
- *  "level": "WARN",
- *  "description": "User joebob1 has enabled CrowdStrike",
+ * 	"datetime": "2019-01-01 00:00:00,000",
+ * 	"appid": "foobar.netportal_auth",
+ * 	"event": "sys_monitor_enabled:joebob1,crowdstrike",
+ * 	"level": "WARN",
+ * 	"description": "User joebob1 has enabled CrowdStrike",
  * 	"requestId": "897365e2-7cd2-475d-a94b-082bf11f368e"
  * }
  * ```
