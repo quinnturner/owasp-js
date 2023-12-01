@@ -21,7 +21,7 @@
  * 	"requestId": "6e48278f-5f2c-4af0-b821-9d83f1cce30b"
  * }
  * ```
- * @see https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#upload_completeuseridfilenametype
+ * @see [OWASP Logging Vocabulary Cheat Sheet - upload_complete](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#upload_completeuseridfilenametype)
  */
 export function upload_complete<
 	U extends string | number | bigint,
@@ -64,7 +64,7 @@ export function upload_complete<
  * 	"requestId": "7d1fbc36-fc8b-4dc3-8e79-841216f48ada"
  * }
  * ```
- * @see https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#upload_storedfilenamefromto
+ * @see [OWASP Logging Vocabulary Cheat Sheet - upload_stored](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#upload_storedfilenamefromto)
  */
 export function upload_stored<N extends string, T extends string>(
 	filename: N,
@@ -105,7 +105,7 @@ export function upload_stored<N extends string, T extends string>(
  * 	"requestId": "46f449eb-bd37-43ef-a5a6-8d76d80b8975"
  * }
  * ```
- * @see https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#upload_validationfilenamevirusscanimagemagickfailedincompletepassed
+ * @see [OWASP Logging Vocabulary Cheat Sheet - upload_validation](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#upload_validationfilenamevirusscanimagemagickfailedincompletepassed)
  */
 export function upload_validation<
 	N extends string,
@@ -137,7 +137,7 @@ export function upload_validation<
  * 	"requestId": "d4fc4479-210b-4d89-ae1e-4fe7b595cbb4"
  * }
  * ```
- * @see https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#upload_deleteuseridfileid
+ * @see [OWASP Logging Vocabulary Cheat Sheet - upload_delete](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#upload_deleteuseridfileid)
  */
 export function upload_delete<
 	U extends string | number | bigint,

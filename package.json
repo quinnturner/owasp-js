@@ -1,5 +1,5 @@
 {
-  "name": "owasp-logging",
+  "name": "owasp",
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
@@ -9,9 +9,9 @@
   "author": {
     "name": "Quinn Turner"
   },
-  "homepage": "https://github.com/quinnturner/owasp-logging#readme",
+  "homepage": "https://github.com/quinnturner/owasp#readme",
   "bugs": {
-    "url": "https://github.com/quinnturner/owasp-logging/issues"
+    "url": "https://github.com/quinnturner/owasp/issues"
   },
   "keywords": [
     "owasp",
@@ -19,14 +19,14 @@
     "security"
   ],
   "exports": {
-    ".": {
+    "./vocab": {
       "import": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.js"
+        "types": "./dist/vocab.d.ts",
+        "default": "./dist/vocab.js"
       },
       "require": {
-        "types": "./dist/index.d.cts",
-        "default": "./dist/index.cjs"
+        "types": "./dist/vocab.d.cts",
+        "default": "./dist/vocab.cjs"
       }
     },
     "./package.json": "./package.json"
@@ -43,7 +43,7 @@
     "build": "tsup --config tsup.config.ts"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.4.0",
+    "@biomejs/biome": "^1.4.1",
     "bun-types": "^1.0.14",
     "tsup": "^8.0.1",
     "type-fest": "^4.8.2",

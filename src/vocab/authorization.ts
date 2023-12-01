@@ -20,7 +20,7 @@
  * 	"requestId": "00b13b12-51ab-49bc-94be-34c450804850"
  * }
  * ```
- * @see https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#authz_failuseridresource
+ * @see [OWASP Logging Vocabulary Cheat Sheet - authz_fail](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#authz_failuseridresource)
  */
 export function authz_fail<
 	U extends string | number | bigint,
@@ -52,7 +52,7 @@ export function authz_fail<
  * 	"requestId": "5e952d3b-97b6-4c20-a241-b3aa9a591647"
  * }
  * ```
- * @see https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#authz_changeuseridfromto
+ * @see [OWASP Logging Vocabulary Cheat Sheet - authz_change](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#authz_changeuseridfromto)
  */
 export function authz_change<
 	U extends string | number | bigint,
@@ -87,7 +87,7 @@ export function authz_change<
  * 	"requestId": "e02ffa1d-99b6-4616-b54e-5f51ed208331"
  * }
  * ```
- * @see https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#authz_changeuseridfromto
+ * @see [OWASP Logging Vocabulary Cheat Sheet - authz_admin](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#authz_changeuseridfromto)
  */
 export function authz_admin<
 	U extends string | number | bigint,

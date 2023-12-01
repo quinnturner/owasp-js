@@ -20,7 +20,7 @@
  * 	"requestId": "e997c333-fd0a-4880-b6d0-27e871285e50"
  * }
  * ```
- * @see https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#excess_rate_limit_exceededuseridmax
+ * @see [OWASP Logging Vocabulary Cheat Sheet - excess_rate_limit_exceeded](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#excess_rate_limit_exceededuseridmax)
  */
 export function excess_rate_limit_exceeded<
 	U extends string | number | bigint,

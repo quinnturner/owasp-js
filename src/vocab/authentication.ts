@@ -21,7 +21,7 @@ import type { Join } from "type-fest";
  * 	"requestId": "4c682970-ef75-4605-93f2-ab7cf5316d83"
  * }
  * ```
- * @see https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#authn_login_successuserid
+ * @see [OWASP Logging Vocabulary Cheat Sheet - authn_login_success](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#authn_login_successuserid)
  */
 export function authn_login_success<U extends string | number | bigint>(
 	userId: U,
@@ -51,7 +51,7 @@ export function authn_login_success<U extends string | number | bigint>(
  * 	"requestId": "b2b0fc16-cfc1-42cc-a1a7-102a11e7fa6e"
  * }
  * ```
- * @see https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#authn_login_successafterfailuseridretries
+ * @see [OWASP Logging Vocabulary Cheat Sheet - authn_login_successafterfail](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#authn_login_successafterfailuseridretries)
  */
 export function authn_login_successafterfail<
 	U extends string,
@@ -82,7 +82,7 @@ export function authn_login_successafterfail<
  * 	"requestId": "b7c29e30-199e-4234-a8f1-fff0c12f1624"
  * }
  * ```
- * @see https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#authn_login_failuserid
+ * @see [OWASP Logging Vocabulary Cheat Sheet - authn_login_fail](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#authn_login_failuserid)
  */
 export function authn_login_fail<U extends string | number | bigint>(
 	userId: U,
@@ -112,7 +112,7 @@ export function authn_login_fail<U extends string | number | bigint>(
  * 	"requestId": "b7c29e30-199e-4234-a8f1-fff0c12f1624"
  * }
  * ```
- * @see https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#authn_login_fail_maxuseridmaxlimitint
+ * @see [OWASP Logging Vocabulary Cheat Sheet - authn_login_fail_max](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#authn_login_fail_maxuseridmaxlimitint)
  */
 export function authn_login_fail_max<U extends string | number | bigint>(
 	userId: U,
@@ -159,7 +159,7 @@ export function authn_login_fail_max<
  * 	"requestId": "e6a7c70a-7972-49c9-a056-1af31cecf334"
  * }
  * ```
- * @see https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#authn_login_lockuseridreason
+ * @see [OWASP Logging Vocabulary Cheat Sheet - authn_login_lock](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#authn_login_lockuseridreason)
  */
 export function authn_login_lock<
 	U extends string | number | bigint,
@@ -198,7 +198,7 @@ export function authn_login_lock<
  * 	"requestId": "72b29ffe-4b2a-4eef-9b4b-e9dc36483d28"
  * }
  * ```
- * @see https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#authn_password_changeuserid
+ * @see [OWASP Logging Vocabulary Cheat Sheet - authn_password_change](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#authn_password_changeuserid)
  */
 export function authn_password_change<U extends string | number | bigint>(
 	userId: U,
@@ -227,7 +227,7 @@ export function authn_password_change<U extends string | number | bigint>(
  * 	"requestId": "e5c80286-e7b4-4add-ab67-24ce28c7f187"
  * }
  * ```
- * @see https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#authn_password_change_failuserid
+ * @see [OWASP Logging Vocabulary Cheat Sheet - authn_password_change_fail](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#authn_password_change_failuserid)
  */
 export function authn_password_change_fail<U extends string | number | bigint>(
 	userId: U,
@@ -258,7 +258,7 @@ export function authn_password_change_fail<U extends string | number | bigint>(
  * 	"requestId": "c1a514a9-70f1-4496-8c69-ebf9337783f6"
  * }
  * ```
- * @see https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#authn_impossible_traveluseridregion1region2
+ * @see [OWASP Logging Vocabulary Cheat Sheet - authn_impossible_travel](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#authn_impossible_traveluseridregion1region2)
  */
 export function authn_impossible_travel<
 	U extends string | number | bigint,
@@ -290,7 +290,7 @@ export function authn_impossible_travel<
  * 	"requestId": "e6002b7c-87f4-45c9-abf6-f1e0f94523d5"
  * }
  * ```
- * @see https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#authn_token_createduserid-entitlements
+ * @see [OWASP Logging Vocabulary Cheat Sheet - authn_token_created](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#authn_token_createduserid-entitlements)
  */
 export function authn_token_created<
 	U extends string | number | bigint,
@@ -323,7 +323,7 @@ export function authn_token_created<
  * 	"requestId": "caa98ad0-4b9c-4b20-8633-6be104b1933b"
  * }
  * ```
- * @see https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#authn_token_revokeduseridtokenid
+ * @see [OWASP Logging Vocabulary Cheat Sheet - authn_token_revoked](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#authn_token_revokeduseridtokenid)
  */
 export function authn_token_revoked<U extends string | number | bigint>(
 	userId: U,
@@ -363,7 +363,7 @@ export function authn_token_revoked<
  * 	"requestId": "1cfdc054-b87a-4533-9c9a-d329bca0da44"
  * }
  * ```
- * @see https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#authn_token_reuseuseridtokenid
+ * @see [OWASP Logging Vocabulary Cheat Sheet - authn_token_reuse](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#authn_token_reuseuseridtokenid)
  */
 export function authn_token_reuse<U extends string | number | bigint>(
 	userId: U,
@@ -402,7 +402,7 @@ export function authn_token_reuse<
  * 	"requestId": "ecd6341b-bc7c-4301-9c75-f49427f59406"
  * }
  * ```
- * @see https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#authn_token_deleteappid
+ * @see [OWASP Logging Vocabulary Cheat Sheet - authn_token_delete](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#authn_token_deleteappid)
  */
 export function authn_token_delete<A extends string | number | bigint>(
 	appId: A,

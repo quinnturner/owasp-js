@@ -1,6 +1,8 @@
-# owasp-logging
+# OWASP
 
-This package implements the OWASP Cheat Sheet for [Application Logging Vocabulary](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#input-validation-input), a standard vocabulary for logging security events.
+This package is intended to assist developers to follow OWASP best practices.
+
+Currently, it implements the OWASP Cheat Sheet for [Application Logging Vocabulary](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Vocabulary_Cheat_Sheet.html#input-validation-input), a standard vocabulary for logging security events.
 
 The intent is to simplify monitoring and alerting such that, assuming developers trap errors and log them using this vocabulary, monitoring and alerting would be improved by simply keying on these terms.
 
@@ -9,13 +11,15 @@ This logging standard would seek to define specific keywords which, when applied
 ## Installation
 
 ```bash
-npm install owasp-logging
-# yarn add owasp-logging
-# pnpm install owasp-logging
-# bun install owasp-logging
+npm install owasp
+# yarn add owasp
+# pnpm install owasp
+# bun install owasp
 ```
 
 ## Usage
+
+### Logging vocabulary
 
 Here is an example of how to use this package with [pino](https://github.com/pinojs/pino)
 and [Express](https://github.com/expressjs/express) to log authentication events.
@@ -27,9 +31,9 @@ and [Express](https://github.com/expressjs/express) to log authentication events
 
 ```ts
 import { Router } from 'express';
-import { authn_login_fail, authn_login_fail_max, authn_login_success } from 'owasp-logging';
+import { authn_login_fail, authn_login_fail_max, authn_login_success } from 'owasp/vocab';
 // Or, if you want to simplify imports, you can do:
-// import * as owasp from 'owasp-logging';
+// import * as owasp from 'owasp-helpers';
 import { logger as rootLogger } from '../logger.js';
 
 const router = Router();
@@ -48,7 +52,7 @@ router.route("/login").post(async (req, res, next) => {
     if (!userId || !password || userId.length === 0 || password.length === 0) {
       logger.warn(
         {
-          // owasp-logging provides a set of standard events to log.
+          // owasp-helpers provides a set of standard events to log.
           // Use the `event` property to log the event.
           event: authn_login_fail(userId), // The result of this function is: `authn_login_fail:${userId}`
         },
@@ -152,5 +156,5 @@ Ensure linting, formatting, and tests pass before submitting a PR.
 
 ```bash
 bun run check
-bun test
+bun test # let's keep the test coverage at 100%!
 ```
