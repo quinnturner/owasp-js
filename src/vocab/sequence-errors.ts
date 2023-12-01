@@ -11,11 +11,11 @@
  * @example
  * ```json
  * {
- *  "datetime": "2019-01-01 00:00:00,000",
- *  "appid": "foobar.netportal_auth",
- *  "event": "sequence_fail:joebob1",
- *  "level": "WARN",
- *  "description": "User joebob1 has reached a part of the application out of the normal application flow.",
+ * 	"datetime": "2019-01-01 00:00:00,000",
+ * 	"appid": "foobar.netportal_auth",
+ * 	"event": "sequence_fail:joebob1",
+ * 	"level": "WARN",
+ * 	"description": "User joebob1 has reached a part of the application out of the normal application flow.",
  * 	"requestId": "b6de2047-08f0-4041-aab1-c693d337d63b"
  * }
  * ```

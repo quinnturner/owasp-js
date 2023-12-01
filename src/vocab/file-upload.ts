@@ -87,10 +87,10 @@ export function upload_stored<N extends string, T extends string>(
  * const { status } = await performVirusScan(filepath); // PASSED, INCOMPLETE, FAILED
  * const vendor = "virusscan"; // imagemagick, clamav, etc.
  * if (status === "FAILED") {
- *  await fs.promises.rm(filepath, { force: true })
- *  logger.critical({ event: upload_validation(filename, vendor, status) }, `File ${filename} ${status} virus scan and was purged`);
+ * 	await fs.promises.rm(filepath, { force: true })
+ * 	logger.critical({ event: upload_validation(filename, vendor, status) }, `File ${filename} ${status} virus scan and was purged`);
  * } else {
- *  logger.info({ event: upload_validation(filename, vendor, status) }, `File ${filename} ${status} virus scan`);
+ * 	logger.info({ event: upload_validation(filename, vendor, status) }, `File ${filename} ${status} virus scan`);
  * }
  *
  * ```

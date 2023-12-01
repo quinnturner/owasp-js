@@ -17,11 +17,11 @@ import type { Join } from "type-fest";
  * @example
  * ```json
  * {
- *  "datetime": "2019-01-01 00:00:00,000",
- *  "appid": "foobar.netportal_auth",
- *  "event": "user_created:joebob1,user1,admin:create,update,delete",
- *  "level": "WARN",
- *  "description": "User joebob1 created user1 with admin:create,update,delete privilege attributes",
+ * 	"datetime": "2019-01-01 00:00:00,000",
+ * 	"appid": "foobar.netportal_auth",
+ * 	"event": "user_created:joebob1,user1,admin:create,update,delete",
+ * 	"level": "WARN",
+ * 	"description": "User joebob1 created user1 with admin:create,update,delete privilege attributes",
  * 	"requestId": "58705027-fc55-49b3-b8df-ee4842ef105a"
  * }
  * ```
@@ -74,11 +74,11 @@ export function user_created<
  * @example
  * ```json
  * {
- *  "datetime": "2019-01-01 00:00:00,000",
- *  "appid": "foobar.netportal_auth",
- *  "event": "user_updated:joebob1,user1,admin:create,update,delete",
- *  "level": "WARN",
- *  "description": "User joebob1 updated user1 with admin:create,update,delete privilege attributes",
+ * 	"datetime": "2019-01-01 00:00:00,000",
+ * 	"appid": "foobar.netportal_auth",
+ * 	"event": "user_updated:joebob1,user1,admin:create,update,delete",
+ * 	"level": "WARN",
+ * 	"description": "User joebob1 updated user1 with admin:create,update,delete privilege attributes",
  * 	"requestId": "55acb903-49a8-4d31-ae52-c7053897cba8"
  * }
  * ```
@@ -130,11 +130,11 @@ export function user_updated<
  * @example
  * ```json
  * {
- *  "datetime": "2019-01-01 00:00:00,000",
- *  "appid": "foobar.netportal_auth",
- *  "event": "user_archived:joebob1,user1",
- *  "level": "WARN",
- *  "description": "User joebob1 archived user1",
+ * 	"datetime": "2019-01-01 00:00:00,000",
+ * 	"appid": "foobar.netportal_auth",
+ * 	"event": "user_archived:joebob1,user1",
+ * 	"level": "WARN",
+ * 	"description": "User joebob1 archived user1",
  * 	"requestId": "e5ce13d6-bbf7-4479-be87-b33012a84640"
  * }
  * ```
@@ -163,11 +163,11 @@ export function user_archived<
  * @example
  * ```json
  * {
- *  "datetime": "2019-01-01 00:00:00,000",
- *  "appid": "foobar.netportal_auth",
- *  "event": "user_deleted:joebob1,user1",
- *  "level": "WARN",
- *  "description": "User joebob1 has deleted user1",
+ * 	"datetime": "2019-01-01 00:00:00,000",
+ * 	"appid": "foobar.netportal_auth",
+ * 	"event": "user_deleted:joebob1,user1",
+ * 	"level": "WARN",
+ * 	"description": "User joebob1 has deleted user1",
  * 	"requestId": "5868ae61-e94e-4419-b231-0d81479e2abb"
  * }
  * ```

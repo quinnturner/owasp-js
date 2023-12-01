@@ -11,11 +11,11 @@
  * @example
  * ```json
  * {
- *  "datetime": "2019-01-01 00:00:00,000",
- *  "appid": "foobar.netportal_auth",
- *  "event": "session_created:joebob1",
- *  "level": "INFO",
- *  "description": "User joebob1 has started a new session",
+ * 	"datetime": "2019-01-01 00:00:00,000",
+ * 	"appid": "foobar.netportal_auth",
+ * 	"event": "session_created:joebob1",
+ * 	"level": "INFO",
+ * 	"description": "User joebob1 has started a new session",
  * 	"requestId": "3852a457-6d69-4f8c-a98e-aeafe5f1fdd1"
  * }
  * ```
@@ -39,11 +39,11 @@ export function session_created<U extends string | number | bigint>(userId: U) {
  * @example
  * ```json
  * {
- *  "datetime": "2019-01-01 00:00:00,000",
- *  "appid": "foobar.netportal_auth",
- *  "event": "session_renewed:joebob1",
- *  "level": "INFO",
- *  "description": "User joebob1 was warned of expiring session and extended",
+ * 	"datetime": "2019-01-01 00:00:00,000",
+ * 	"appid": "foobar.netportal_auth",
+ * 	"event": "session_renewed:joebob1",
+ * 	"level": "INFO",
+ * 	"description": "User joebob1 was warned of expiring session and extended",
  * 	"requestId": "ec67b394-8391-4579-94fb-a36719ab5292"
  * }
  * ```
@@ -70,11 +70,11 @@ export function session_renewed<U extends string | number | bigint>(userId: U) {
  * @example
  * ```json
  * {
- *  "datetime": "2019-01-01 00:00:00,000",
- *  "appid": "foobar.netportal_auth",
- *  "event": "session_expired:joebob1,revoked",
- *  "level": "INFO",
- *  "description": "User joebob1 session expired due to administrator revocation.",
+ * 	"datetime": "2019-01-01 00:00:00,000",
+ * 	"appid": "foobar.netportal_auth",
+ * 	"event": "session_expired:joebob1,revoked",
+ * 	"level": "INFO",
+ * 	"description": "User joebob1 session expired due to administrator revocation.",
  * 	"requestId": "5c0f4762-1170-437f-b618-4406847a533b"
  * }
  * ```
@@ -102,11 +102,11 @@ export function session_expired<
  * @example
  * ```json
  * {
- *  "datetime": "2019-01-01 00:00:00,000",
- *  "appid": "foobar.netportal_auth",
- *  "event": "session_use_after_expire:joebob1",
- *  "level": "WARN",
- *  "description": "User joebob1 attempted access after session expired.",
+ * 	"datetime": "2019-01-01 00:00:00,000",
+ * 	"appid": "foobar.netportal_auth",
+ * 	"event": "session_use_after_expire:joebob1",
+ * 	"level": "WARN",
+ * 	"description": "User joebob1 attempted access after session expired.",
  * 	"requestId": "..."
  * }
  * ```

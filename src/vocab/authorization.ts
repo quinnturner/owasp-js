@@ -12,11 +12,11 @@
  * @example
  * ```json
  * {
- *  "datetime": "2019-01-01 00:00:00,000",
- *  "appid": "foobar.netportal_auth",
- *  "event": "authz_fail:joebob1,resource",
- *  "level": "CRITICAL",
- *  "description": "User joebob1 attempted to access a resource without entitlement",
+ * 	"datetime": "2019-01-01 00:00:00,000",
+ * 	"appid": "foobar.netportal_auth",
+ * 	"event": "authz_fail:joebob1,resource",
+ * 	"level": "CRITICAL",
+ * 	"description": "User joebob1 attempted to access a resource without entitlement",
  * 	"requestId": "00b13b12-51ab-49bc-94be-34c450804850"
  * }
  * ```
@@ -44,11 +44,11 @@ export function authz_fail<
  * @example
  * ```json
  * {
- *  "datetime": "2019-01-01 00:00:00,000",
- *  "appid": "foobar.netportal_auth",
- *  "event": "authz_change:joebob1,user,admin",
- *  "level": "WARN",
- *  "description": "User joebob1 access was changed from user to admin",
+ * 	"datetime": "2019-01-01 00:00:00,000",
+ * 	"appid": "foobar.netportal_auth",
+ * 	"event": "authz_change:joebob1,user,admin",
+ * 	"level": "WARN",
+ * 	"description": "User joebob1 access was changed from user to admin",
  * 	"requestId": "5e952d3b-97b6-4c20-a241-b3aa9a591647"
  * }
  * ```
