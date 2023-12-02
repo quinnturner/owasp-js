@@ -30,11 +30,15 @@ and [Express](https://github.com/expressjs/express) to log authentication events
 **You can use any logger you want!** This package simply provides a set of standard events to log.
 
 ```ts
-import { Router } from 'express';
-import { authn_login_fail, authn_login_fail_max, authn_login_success } from 'owasp/vocab';
-// Or, if you want to simplify imports, you can do:
-// import * as owasp from 'owasp-helpers';
-import { logger as rootLogger } from '../logger.js';
+import { Router } from "express";
+// Alternatively,
+// import * as vocab from 'owasp/vocab';
+import {
+  authn_login_fail,
+  authn_login_fail_max,
+  authn_login_success,
+} from "owasp/vocab";
+import { logger as rootLogger } from "../logger.js";
 
 const router = Router();
 
@@ -54,9 +58,10 @@ router.route("/login").post(async (req, res, next) => {
         {
           // owasp-helpers provides a set of standard events to log.
           // Use the `event` property to log the event.
-          event: authn_login_fail(userId), // The result of this function is: `authn_login_fail:${userId}`
+          // The result of this function is: `authn_login_fail:${userId}`
+          event: authn_login_fail(userId),
         },
-        `User ${userId} login failed because username or password was not provided`,
+        `User ${userId} login failed because username or password was not provided`
       );
       return res.status(401).send("Invalid username or password.");
     }
@@ -68,36 +73,42 @@ router.route("/login").post(async (req, res, next) => {
         {
           event: authn_login_fail(userId),
         },
-        `User ${user} login failed because user does not exist`,
+        `User ${user} login failed because user does not exist`
       );
       return res.status(401).send("Invalid username or password.");
     }
     if (!checkPassword(user.password, password)) {
-      user.++;
+      user.failedLoginAttempts++;
 
-      if (user.failedLoginAttempts >= MAX_FAILED_LOGIN_ATTEMPTS && user.lastFailedLoginAttempt > Date.now() - 5 * 60 * 1000) {
+      if (
+        user.failedLoginAttempts >= MAX_FAILED_LOGIN_ATTEMPTS &&
+        user.lastFailedLoginAttempt > Date.now() - 5 * 60 * 1000
+      ) {
         logger.warn(
           {
             event: authn_login_fail_max(userId, MAX_FAILED_LOGIN_ATTEMPTS),
           },
-          `User ${userId} reached the login fail limit of ${MAX_FAILED_LOGIN_ATTEMPTS}`,
+          `User ${userId} reached the login fail limit of ${MAX_FAILED_LOGIN_ATTEMPTS}`
         );
-        const lockReason = 'maxretries';
+        const lockReason = "maxretries";
         logger.warn(
           {
             event: authn_login_lock(userId, lockReason),
           },
           `User ${userId} login locked because ${lockReason} exceeded`
-        )
+        );
         user.locked = true;
         await user.save();
-        return res.status(429).send(`You have reached the login fail limit of ${MAX_FAILED_LOGIN_ATTEMPTS} attempts. Please wait 5 minutes and try again.`);
+        return res.status(429).send(
+          `You have reached the login fail limit of ${MAX_FAILED_LOGIN_ATTEMPTS} attempts.\
+                        Please wait 5 minutes and try again.`
+        );
       }
       logger.warn(
         {
           event: authn_login_fail(userId),
         },
-        `User ${user} login failed`,
+        `User ${user} login failed`
       );
       await user.save();
       return res.status(401).send("Invalid username or password.");
@@ -107,7 +118,7 @@ router.route("/login").post(async (req, res, next) => {
         {
           event: authn_login_fail(userId),
         },
-        `User ${userId} login failed because user is locked`,
+        `User ${userId} login failed because user is locked`
       );
       return res.status(401).send("Account is locked. Please contact support.");
     }
@@ -117,14 +128,14 @@ router.route("/login").post(async (req, res, next) => {
         {
           event: authn_login_successafterfail(userId, user.failedLoginAttempts),
         },
-        `User ${userId} login successfully`,
+        `User ${userId} login successfully`
       );
     } else {
       logger.info(
         {
           event: authn_login_success(userId),
         },
-        `User ${userId} login successfully`,
+        `User ${userId} login successfully`
       );
     }
 
