@@ -1,6 +1,6 @@
 {
   "name": "owasp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "license": "MIT",
   "publishConfig": {
@@ -13,12 +13,18 @@
   "bugs": {
     "url": "https://github.com/quinnturner/owasp/issues"
   },
-  "keywords": [
-    "owasp",
-    "logging",
-    "security"
-  ],
+  "keywords": ["owasp", "logging", "security"],
   "exports": {
+    "./dom": {
+      "import": {
+        "types": "./dist/dom.d.ts",
+        "default": "./dist/dom.js"
+      },
+      "require": {
+        "types": "./dist/dom.d.cts",
+        "default": "./dist/dom.cjs"
+      }
+    },
     "./vocab": {
       "import": {
         "types": "./dist/vocab.d.ts",
@@ -33,9 +39,7 @@
   },
   "main": "./dist/index.cjs",
   "types": "./dist/index.d.cts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "format": "biome format ./src --write",
     "lint": "biome lint ./src",
@@ -44,10 +48,10 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.4.1",
-    "bun-types": "^1.0.14",
+    "bun-types": "^1.0.17",
     "tsup": "^8.0.1",
-    "type-fest": "^4.8.2",
-    "typescript": "^5.3.2"
+    "type-fest": "^4.8.3",
+    "typescript": "^5.3.3"
   },
   "packageManager": "bun@1.0.14"
 }

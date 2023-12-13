@@ -2,6 +2,7 @@ import { defineConfig } from "tsup";
 
 export default defineConfig({
 	entry: {
+		dom: "./src/dom/index.ts",
 		vocab: "./src/vocab/index.ts",
 	},
 	splitting: false,

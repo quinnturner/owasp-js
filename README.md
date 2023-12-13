@@ -155,6 +155,23 @@ router.route("/login").post(async (req, res, next) => {
 export default router;
 ```
 
+### DOM Utilities
+
+This package also provides a set of DOM utilities to help increase security.
+
+```ts
+import { openPopup } from "owasp/dom";
+
+function onClick() {
+  // Applies the following attributes to the window:
+  // * - `'noopener'`: Prevents the new window from having access to the originating window via `Window.opener`.
+  // * - `'noreferrer'`: Omits the `Referer` header and sets `noopener` to true.
+  // Subsequently, it resets the `opener` property of the new window to `null`.
+  // This prevents the new window from being able to navigate the originating window.
+  openPopup("https://example.com", "Window name", "width=200,height=200");
+}
+```
+
 ## Contributing
 
 Contributions are welcome!

@@ -8,5 +8,13 @@
 		"rules": {
 			"recommended": true
 		}
-	}
+	},
+	"overrides": [
+		{
+			"formatter": {
+				"indentStyle": "space"
+			},
+			"include": ["package.json"]
+		}
+	]
 }
