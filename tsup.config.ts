@@ -1,10 +1,7 @@
 import { defineConfig } from "tsup";
 
 export default defineConfig({
-	entry: {
-		dom: "./src/dom/index.ts",
-		vocab: "./src/vocab/index.ts",
-	},
+	entry: ["src/index.ts"],
 	splitting: false,
 	sourcemap: true,
 	format: ["cjs", "esm"],
