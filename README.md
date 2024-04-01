@@ -32,12 +32,12 @@ and [Express](https://github.com/expressjs/express) to log authentication events
 ```ts
 import { Router } from "express";
 // Alternatively,
-// import * as vocab from 'owasp/vocab';
+// import * as vocab from 'owasp';
 import {
   authn_login_fail,
   authn_login_fail_max,
   authn_login_success,
-} from "owasp/vocab";
+} from "owasp";
 import { logger as rootLogger } from "../logger.js";
 
 const router = Router();
@@ -160,7 +160,7 @@ export default router;
 This package also provides a set of DOM utilities to help increase security.
 
 ```ts
-import { openPopup } from "owasp/dom";
+import { openPopup } from "owasp";
 
 function onClick() {
   // Applies the following attributes to the window:
