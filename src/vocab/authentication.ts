@@ -382,7 +382,7 @@ export function authn_token_reuse<
 }
 
 /**
- * A previously revoked token was attempted to be reused.
+ * When a token is deleted it should be recorded.
  *
  * **Level:** `WARN`
  *
