@@ -9,9 +9,9 @@
   "author": {
     "name": "Quinn Turner"
   },
-  "homepage": "https://github.com/quinnturner/owasp#readme",
+  "homepage": "https://github.com/quinnturner/owasp-js#readme",
   "bugs": {
-    "url": "https://github.com/quinnturner/owasp/issues"
+    "url": "https://github.com/quinnturner/owasp-js/issues"
   },
   "repository": "github:quinnturner/owasp",
   "keywords": ["owasp", "logging", "security"],
