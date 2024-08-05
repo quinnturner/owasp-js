@@ -56,7 +56,7 @@ router.route("/login").post(async (req, res, next) => {
     if (!userId || !password || userId.length === 0 || password.length === 0) {
       logger.warn(
         {
-          // owasp-helpers provides a set of standard events to log.
+          // owasp/vocab provides a set of standard events to log.
           // Use the `event` property to log the event.
           // The result of this function is: `authn_login_fail:${userId}`
           event: authn_login_fail(userId),
@@ -154,6 +154,10 @@ router.route("/login").post(async (req, res, next) => {
 
 export default router;
 ```
+
+> [!Tip]
+> The IntelliSense of `owasp/vocab` will help you to know which events are available, what level to log them at, and what properties to include.
+> ![VSCode IntelliSense](./docs/assets/authn_login_fail.png)
 
 > [!IMPORTANT]  
 > Logging events is not enough to secure your application. You should also monitor these events and take action when necessary.
