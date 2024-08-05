@@ -1,6 +1,6 @@
 {
   "name": "owasp",
-  "version": "1.2.0",
+  "version": "1.2.0-beta.0",
   "type": "module",
   "license": "MIT",
   "publishConfig": {
@@ -13,6 +13,7 @@
   "bugs": {
     "url": "https://github.com/quinnturner/owasp/issues"
   },
+  "repository": "github:quinnturner/owasp",
   "keywords": ["owasp", "logging", "security"],
   "exports": {
     "./dom": {
@@ -39,19 +40,17 @@
   },
   "files": ["dom", "vocab"],
   "scripts": {
-    "format": "biome format ./src --write",
-    "lint": "biome lint ./src",
-    "check": "biome check --apply ./src",
+    "check": "biome check --write ./src",
     "build": "tsup --config tsup.config.ts"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.7.2",
-    "@happy-dom/global-registrator": "^14.7.1",
-    "bun-types": "^1.1.6",
-    "tsup": "^8.0.2",
-    "type-fest": "^4.18.1",
-    "typescript": "^5.4.5"
+    "@biomejs/biome": "^1.8.3",
+    "@happy-dom/global-registrator": "^14.12.3",
+    "bun-types": "^1.1.21",
+    "tsup": "^8.2.4",
+    "type-fest": "^4.23.0",
+    "typescript": "^5.5.4"
   },
-  "packageManager": "bun@1.1.0",
+  "packageManager": "bun@1.1.21",
   "trustedDependencies": ["@biomejs/biome", "esbuild"]
 }
