@@ -13,7 +13,7 @@
   "bugs": {
     "url": "https://github.com/quinnturner/owasp-js/issues"
   },
-  "repository": "github:quinnturner/owasp",
+  "repository": "github:quinnturner/owasp-js",
   "keywords": ["owasp", "logging", "security"],
   "exports": {
     "./dom": {
