@@ -155,6 +155,10 @@ router.route("/login").post(async (req, res, next) => {
 export default router;
 ```
 
+> [!IMPORTANT]  
+> Logging events is not enough to secure your application. You should also monitor these events and take action when necessary.
+> [We have provided some example implementations using popular logging and alerting tools](./docs/vocab-monitoring.md).
+
 ### DOM Utilities
 
 This package also provides a set of DOM utilities to help increase security.
