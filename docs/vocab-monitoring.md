@@ -4,7 +4,8 @@
 
 Here are some example implementations using popular logging and alerting tools:
 
-> [!NOTE] Having these tools listed does not imply OWASP's endorsement or promotion. The examples provided are for illustrative purposes only. Always refer to the official documentation of the respective tools for detailed instructions.
+> [!NOTE]
+> Listing these tools does not imply OWASP's endorsement or promotion. The examples provided are for illustrative purposes only. Always refer to the official documentation of the respective tools for detailed instructions.
 
 ## Datadog
 
