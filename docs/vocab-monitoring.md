@@ -4,12 +4,25 @@
 
 Here are some example implementations using popular logging and alerting tools:
 
-- [Kibana](https://www.elastic.co/kibana)
-- [SumoLogic](https://www.sumologic.com/)
-- [Splunk](https://www.splunk.com/)
-- [Datadog](https://www.datadoghq.com/)
-- [New Relic](https://newrelic.com/)
-- [Sentry](https://sentry.io/)
+> [!NOTE] Having these tools listed does not imply OWASP's endorsement or promotion. The examples provided are for illustrative purposes only. Always refer to the official documentation of the respective tools for detailed instructions.
+
+## Datadog
+
+1. **Send Logs to Datadog**: Ensure your logs are being sent to Datadog.
+1. **Create a Log Search**: Use the Datadog log search to find specific event properties.
+
+   **Example Datadog query:**
+
+   ```txt
+   event:malicious_direct_reference:*
+   ```
+
+1. **Create a Monitor**: Set up a log monitor based on the search query.
+
+**Example Monitor Configuration:**
+
+- **Alert Condition**: When the count of matching logs exceeds 0 in a 5-minute window.
+- **Notifications**: Configure email, Slack, or other alerting channels.
 
 ## Kibana
 
@@ -29,6 +42,53 @@ Here are some example implementations using popular logging and alerting tools:
 
 - **Trigger**: When the event count exceeds 0 within a 5-minute window.
 - **Actions**: Send notifications via email, Slack, or other channels.
+
+## New Relic
+
+1. **Send Logs to New Relic**: Ensure your logs are being sent to New Relic.
+1. **Create a Log Query**: Use the New Relic query language (NRQL) to search for specific event properties.
+
+**Example NRQL query:**
+
+```sql
+SELECT count(*) FROM Log WHERE event LIKE 'malicious_direct_reference:%'
+```
+
+1. **Create an Alert**: Set up an alert condition based on the query.
+
+**Example Alert Condition:**
+
+- **Trigger**: When the query result is greater than 0 within a 5-minute window.
+- **Actions**: Configure email, Slack, or other notifications.
+
+## Sentry
+
+1. **Send Logs to Sentry**: Ensure your logs are being sent to Sentry.
+2. **Set Up Alerts**: Use Sentry's alerting feature to monitor for specific event properties.
+
+   **Example Sentry Alert Rule:**
+
+   - **Filter**: Events with the tag `event` containing `malicious_direct_reference:*`.
+   - **Trigger Condition**: When the event occurs more than 0 times in a 5-minute window.
+   - **Actions**: Send notifications via email, Slack, or other integrations.
+
+## Splunk
+
+1. **Send Logs to Splunk**: Ensure your logs are being indexed in Splunk.
+2. **Create a Splunk Search**: Use the Splunk search language to find specific event properties.
+
+   **Example Splunk query:**
+
+   ```txt
+   index=your_index sourcetype=your_sourcetype "event=malicious_direct_reference:*"
+   ```
+
+3. **Create an Alert**: Set up an alert based on the search query.
+
+**Example Alert Configuration:**
+
+- **Trigger Condition**: When the number of matching events is greater than 0 within a 5-minute window.
+- **Actions**: Configure email, Slack, or other notifications.
 
 ## SumoLogic
 
@@ -60,68 +120,3 @@ Here are some example implementations using popular logging and alerting tools:
        description = "A malicious direct reference was detected in the logs."
    }
    ```
-
-## Splunk
-
-1. **Send Logs to Splunk**: Ensure your logs are being indexed in Splunk.
-2. **Create a Splunk Search**: Use the Splunk search language to find specific event properties.
-
-   **Example Splunk query:**
-
-   ```txt
-   index=your_index sourcetype=your_sourcetype "event=malicious_direct_reference:*"
-   ```
-
-3. **Create an Alert**: Set up an alert based on the search query.
-
-**Example Alert Configuration:**
-
-- **Trigger Condition**: When the number of matching events is greater than 0 within a 5-minute window.
-- **Actions**: Configure email, Slack, or other notifications.
-
-## Datadog
-
-1. **Send Logs to Datadog**: Ensure your logs are being sent to Datadog.
-1. **Create a Log Search**: Use the Datadog log search to find specific event properties.
-
-   **Example Datadog query:**
-
-   ```txt
-   event:malicious_direct_reference:*
-   ```
-
-1. **Create a Monitor**: Set up a log monitor based on the search query.
-
-**Example Monitor Configuration:**
-
-- **Alert Condition**: When the count of matching logs exceeds 0 in a 5-minute window.
-- **Notifications**: Configure email, Slack, or other alerting channels.
-
-## New Relic
-
-1. **Send Logs to New Relic**: Ensure your logs are being sent to New Relic.
-1. **Create a Log Query**: Use the New Relic query language (NRQL) to search for specific event properties.
-
-**Example NRQL query:**
-
-```sql
-SELECT count(*) FROM Log WHERE event LIKE 'malicious_direct_reference:%'
-```
-
-1. **Create an Alert**: Set up an alert condition based on the query.
-
-**Example Alert Condition:**
-
-- **Trigger**: When the query result is greater than 0 within a 5-minute window.
-- **Actions**: Configure email, Slack, or other notifications.
-
-## Sentry
-
-1. **Send Logs to Sentry**: Ensure your logs are being sent to Sentry.
-2. **Set Up Alerts**: Use Sentry's alerting feature to monitor for specific event properties.
-
-   **Example Sentry Alert Rule:**
-
-   - **Filter**: Events with the tag `event` containing `malicious_direct_reference:*`.
-   - **Trigger Condition**: When the event occurs more than 0 times in a 5-minute window.
-   - **Actions**: Send notifications via email, Slack, or other integrations.
